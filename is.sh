@@ -1,9 +1,9 @@
 #!/bin/bash
 # Game of Is: What is and what may ever be?
-read -p "Welcome to the game of is! - Who are you? " deadmanname
-read -p "Well met, {$deadmanname}. I am the spirit in the shell. I am the oneshot oracle living in your computer. First, I bid you answer my questions-three. {$deadmanname} Who do you serve? 1/0 " q0
-read -p "I see, {$deadmanname}. What is your fate? 1/0 " q1
-read -p "I understand, {$deadmanname}. How did this begin? 1/0 " q2
+read -p "Welcome to the game of is! - Who are you? " name
+read -p "Well met, {$name}. I am the spirit in the shell. I am the oneshot oracle living in your computer. First, I bid you answer my questions-three. Who do you serve? 1/0 " q0
+read -p "I see, {$name}. What is your fate? 1/0 " q1
+read -p "I understand, {$name}. How did this begin? 1/0 " q2
 
 if [ "$q0" = "1" ]; then
   echo "Ok."
