@@ -1,65 +1,59 @@
 #!/bin/bash
 # Game of Is: What is and what may ever be?
 # answer questions and return an answer with altering odds
+
 read -p "Welcome to the game of is! - Who are you? " name
+cat << "EOF"
+     .-.
+   .'   `.
+   :0 0   :
+   : o    `.
+  :         ``.
+ :             `.
+:  :         .   `.
+:   :          ` . `.
+ `.. :            `. ``;
+    `:;             `:'
+       :              `.
+        `.              `.     .
+          `'`'`'`---..,___`;.-'
+    
+EOF
 echo "I am the spirit in the shell."
 echo "I am the oneshot oracle living in your computer."
 echo "I bid you answer my questions-three, so that I may calculate an answer to your any query."
+
 while true; do
-
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "###############|````|##############"
-echo "#####\```````````````````````/#####"
-echo "######\`````````````````````/######"
-echo "#######\```````````````````/#######"
-echo "########\`````````````````/########"
-echo "#########\```````````````/#########"
-echo "##########\`````````````/##########"
-echo "###########\```````````/###########"
-echo "############\`````````/############"
-echo "#############\```````/#############"
-echo "##############\`````/##############"
-echo "###############\```/###############"
-echo "################\`/################"
-echo "#################\/################"
-echo ""
-
 clock=21
 
 read -p "Well met, $name. First, tell me, are you alive now? y/n " q0
 if [ "$q0" = "y" ]; then
-  clock=21
   read -p "That is good. Next, are you mortal here? y/n  " q1
   if [ "$q1" = "y" ]; then
       read -p "Ever better, $name. Last, is your spirit eternal? y/n " q2
-
       if [ "$q2" = "y" ]; then
-        clock=10
+        min=0
+        max=8
+        clock=$(($RANDOM%($max-$min+1)+$min))
       fi
       if [ "$q2" = "n" ]; then
-        clock=21
+        min=8
+        max=13
+        clock=$(($RANDOM%($max-$min+1)+$min))
       fi
   fi
   if [ "$q1" = "n" ]; then
-      clock=21
+        min=13
+        max=21
+        clock=$(($RANDOM%($max-$min+1)+$min))
       read -p "What's your secret?" secret
   fi
 fi
 if [ "$q0" = "n" ]; then
-  clock=21
-  read -p "What's your secret?" secret
+   min=13
+   max=21
+   clock=$(($RANDOM%($max-$min+1)+$min))
+   read -p "What's your secret?" secret
 fi
 
 answers=("It is certain." "It is decidedly so."
