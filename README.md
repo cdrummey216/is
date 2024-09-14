@@ -2,7 +2,7 @@
 
 # is
 
-bash ./is.sh
+```bash ./is.sh```
 
 Welcome to the game of is! 
 
