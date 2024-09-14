@@ -6,29 +6,33 @@ echo ""
 echo ""
 echo ""
 read -p "     Welcome to the game of is! - Who are you? " name
-echo ""
+echo "" 
 echo ""
 echo "" && sleep 1
 echo ""
 echo "     Well met, $name. Let's begin."
 echo ""
-echo ""
+echo ""&& sleep 1
 echo "" && sleep 1
 echo ""
+echo ""
+echo ""
+echo ""
+echo ""
 cat << "EOF"
-     .-.
-   .'   `.
-   :0 0   : I am the spirit in the shell.
-   : o    `.
-  :         ``.
- :             `.I am the oneshot oracle living in your computer.
-:  :         .   `.
-:   :          ` . `.I am Gh0st-in-the-machine.
- `.. :            `. ``;
-    `:;             `:' I bid you answer my questions-three,
-       :              `.so that I may calculate an answer to your any query.
-        `.              `.     .
-          `'`'`'`---..,___`;.-'
+	     .-.
+	   .'   `.
+	   :0 0   : I am the spirit in the shell.
+	   : o    `.
+	  :         ``.
+	 :             `.I am the oneshot oracle living in your computer.
+	:  :         .   `.
+	:   :          ` . `.I am Gh0st-in-the-machine.
+	 `.. :            `. ``;
+	    `:;             `:' I bid you answer my questions-three,
+	       :              `.so that I may calculate an answer to your any query.
+		`.              `.     .
+		  `'`'`'`---..,___`;.-'
     
 EOF
 
@@ -83,6 +87,7 @@ echo ""
 echo "" && sleep 1
 echo ""
    read -p "    What's your secret?" secret
+   read -p "    Is there meaning?" end
 fi
 
 answers=("It is certain." "It is decidedly so."
@@ -96,60 +101,59 @@ answers=("It is certain." "It is decidedly so."
   "Outlook not so good." "Very doubtful." "No.")
 echo ""
 echo "" && sleep 1
+echo "     Very well."
+echo "" && sleep 1
 echo ""
-echo ""
-read -p "     Ask your question " question
-
 cat << "EOF"
-             ,----------------,              ,---------,
-        ,-----------------------,          ,"        ,"|
-      ,"                      ,"|        ,"        ,"  |
-     +-----------------------+  |      ,"        ,"    |
-     |  .-----------------.  |  |     +---------+      |
-     |  |       .-.       |  |  |     | -==----'|      |
-     |  |      (o o)      |  |  |     |         |      |
-     |  |      | O \      |  |  |/----|`---=    |      |
-     |  |       \   \     |  |  |   ,/|==== ooo |      ;
-     |  |        `~~~'    |  |  |  // |(((( [33]|    ,"
-     |  `-----------------'  |," .;'| |((((     |  ,"
-     +-----------------------+  ;;  | |         |,"     
-        /_)______________(_/  //'   | +---------+
-   ___________________________/___  `,
-  /  oooooooooooooooo  .o.  oooo /,   \,"-----------
- / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
-/_==__==========__==_ooo__ooo=_/'   /___________,"
+		     ,----------------,              ,---------,
+		,-----------------------,          ,"        ,"|
+	      ,"                      ,"|        ,"        ,"  |
+	     +-----------------------+  |      ,"        ,"    |
+	     |  .-----------------.  |  |     +---------+      |
+	     |  |       .-.       |  |  |     | -==----'|      |
+	     |  |      (o o)      |  |  |     |         |      |
+	     |  |      | O \      |  |  |/----|`---=    |      |
+	     |  |       \   \     |  |  |   ,/|==== ooo |      ;
+	     |  |        `~~~'    |  |  |  // |(((( [33]|    ,"
+	     |  `-----------------'  |," .;'| |((((     |  ,"
+	     +-----------------------+  ;;  | |         |,"     
+		/_)______________(_/  //'   | +---------+
+	   ___________________________/___  `,
+	  /  oooooooooooooooo  .o.  oooo /,   \,"-----------
+	 / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
+	/_==__==========__==_ooo__ooo=_/'   /___________,"
 
 EOF
 
-echo "     You asked: $question"
-echo ""
+read -p "     Now, Ask any question of me: " question
 echo "" && sleep 1
-echo "     'I have looked into the future and I say: "
-echo "     ${answers[$clock]}'" ; echo ""
-echo "" && sleep 3
-echo "###############################################"
-echo "###############################################"
-echo "###############################################"
-echo "###############################################"
-echo "###############################################"
-echo ""
-echo ""
-echo ""
+echo "     I have looked into the future and I say: "
+echo "     ..." && sleep 1
+echo "     ......" && sleep 1
+echo "     ........." && sleep 1
+echo "     ${answers[$clock]}" ; echo ""
+echo "" && sleep 5
+echo "     ###############################################"
+echo "     ###############################################"
+echo "     ###############################################"
+echo "     ###############################################"
+echo "     ###############################################"
+echo "" && sleep 1
 cat << "EOF"
-     .-.
-   .'   `.
-   :0 0   :      Let's begin again.
-   : o    `.
-  :         ``.
- :             `.
-:  :         .   `.
-:   :          ` . `.
- `.. :            `. ``;
-    `:;             `:' 
-       :              `.
-        `.              `.     .
-          `'`'`'`---..,___`;.-'
-    
+	     .-.
+	   .'   `.
+	   :0 0   :      Let's begin again.
+	   : o    `.
+	  :         ``.
+	 :             `.
+	:  :         .   `.
+	:   :          ` . `.
+	 `.. :            `. ``;
+	    `:;             `:' 
+	       :              `.
+		`.              `.     .
+		  `'`'`'`---..,___`;.-'
+	    
 EOF
 #exit 0
 done
