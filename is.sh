@@ -68,14 +68,14 @@ if [ "$q0" = "y" ]; then
       fi
   fi
   if [ "$q1" = "n" ]; then
-     min=13
+     min=0
      max=21
      clock=$(($RANDOM%($max-$min+1)+$min))
      echo ""
      echo ""
      echo "" && sleep 1
      echo ""
-     read -p "     What's your secret?" secret
+     read -p "     What's your secret?" hook
   fi
 fi
 if [ "$q0" = "n" ]; then
@@ -86,8 +86,8 @@ if [ "$q0" = "n" ]; then
 echo ""
 echo "" && sleep 1
 echo ""
-   read -p "    What's your secret?" secret
-   read -p "    Is there meaning?" end
+   read -p "    What's your secret?" hook
+   read -p "    Are you ready?" reel
 fi
 
 answers=("It is certain." "It is decidedly so."
